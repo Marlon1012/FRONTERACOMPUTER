@@ -1,0 +1,1180 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FRONTERACOMPUTER</title>
+  <link rel="icon" type="image/png" href="css/images/Favicon.PNG" />
+  <meta name="description" content="FRONTERACOMPUTER: Laptops, teclados, accesorios y más. Ofertas y soporte para tus necesidades tecnológicas." />
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+  <style>
+    /* Fondo hero */
+    .hero {
+      background: url('css/images/hero.jpg') center center/cover no-repeat;
+      min-height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+    }
+    .hero-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      padding: 40px 0;
+      text-align: center;
+      max-width: 600px;
+    }
+    .btn-cta {
+      margin-left: -60px;
+    }
+    .hero-inner h2 {
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 14px;
+      text-shadow: 1px 1px 12px rgba(255,255,255,0.7);
+      white-space: nowrap;
+      overflow-x: auto;
+    }
+    .hero-inner p {
+      font-size: 1.1rem;
+      color: #424242;
+      margin-bottom: 20px;
+    }
+    .btn-cta {
+      display: inline-block;
+      background: #ecb319;
+      color: #222;
+      font-weight: 700;
+      border-radius: 24px;
+      padding: 12px 35px 12px 35px;
+      font-size: 1.1rem;
+      border: none;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.09);
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+      text-align: center;
+    }
+    .btn-cta:hover, .btn-cta:focus {
+      background: #efd65b;
+      color: #000;
+      transform: scale(1.045);
+    }
+    /* Misión, Visión y Valores cards */
+    .about-cards { padding: 20px 0 10px; }
+    .about-cards h2 { text-align:center; margin: 0 0 12px; color:#000; text-transform:uppercase; }
+    .about-cards .grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; }
+    .about-card { position:relative; border-radius:12px; text-align:center; padding:54px 16px 16px; box-shadow:0 6px 18px rgba(0,0,0,.08); }
+    .about-card.mission { background:#dff7f6; }
+    .about-card.vision { background:#e9e2ff; }
+    .about-card.values { background:#fff7d9; }
+    .about-card .icon { position:absolute; top:-26px; left:50%; transform:translateX(-50%); width:56px; height:56px; background:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 12px rgba(0,0,0,.15); }
+    .about-card .icon::after { content:""; position:absolute; bottom:-8px; left:50%; transform:translateX(-50%); width:0; height:0; border-left:8px solid transparent; border-right:8px solid transparent; border-top:8px solid #fff; }
+    .about-card .icon svg { width:26px; height:26px; display:block; fill:#ecb319; }
+    .about-card h3 { color:#000; text-transform:uppercase; font-size:16px; margin-bottom:6px; }
+    .about-card p { color:#000; }
+    .about-card ul { list-style: disc; padding-left: 20px; margin:8px 0 0; display:block; }
+    .about-card.values ul li { margin: 4px 0; line-height: 1.6; }
+    @media (max-width: 1024px) { .about-cards .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 768px) { .about-cards .grid { grid-template-columns:1fr; } }
+
+    /* Responsive navigation + dropdowns */
+    .nav-toggle { display:none; background:#ecb319; color:#000; border:0; padding:8px 12px; border-radius:6px; margin-left:auto; font-weight:700; }
+    /* Dropdown base (desktop) */
+    #navigation .has-submenu { position: relative; }
+    #navigation .submenu { position:absolute; top:100%; left:0; background:#fff; min-width:200px; border:1px solid #ddd; border-radius:8px; padding:8px 0; box-shadow:0 12px 24px rgba(0,0,0,.12); display:none; z-index:1000; }
+    #navigation .submenu li { float:none; border:0; margin:0; }
+    #navigation .submenu a { display:block; padding:10px 14px; color:#000; white-space:nowrap; }
+    #navigation .submenu a:hover { background:#f3f3f3; color:#000; }
+    #navigation .has-submenu:hover > .submenu { display:block; }
+    .submenu-toggle { background:transparent; border:0; color:#ecb319; padding:0 6px; margin-left:4px; cursor:pointer; font-size:16px; line-height:1; }
+    @media (min-width: 769px) {
+      .submenu-toggle { display:none; }
+    }
+    @media (max-width: 768px) {
+      #header { display:flex; align-items:center; gap:10px; }
+      #navigation { flex: 1 1 auto; }
+      .nav-toggle { display:inline-block; }
+      #navigation ul { display:none; flex-direction:column; gap:10px; padding-top:0; }
+      #navigation.open ul { display:flex; }
+      #navigation ul li { float:none; border-right:0; margin-right:0; padding-right:0; }
+      /* Mobile dropdowns */
+      #navigation .submenu { position: static; border:0; border-top:1px dashed #e2e2e2; box-shadow:none; padding:6px 0 8px; display:none; }
+      #navigation .has-submenu.open > .submenu { display:block; }
+      #navigation .has-submenu > a { display:flex; justify-content:space-between; align-items:center; }
+    }
+  </style>
+    </head>
+<body>
+  <a class="skip-link" href="#content">Saltar al contenido</a>
+  <!-- Top -->
+  <div id="top">
+    <div class="shell">
+      <!-- Header -->
+      <div id="header" role="banner">
+        <h1 id="logo"><a href="#"><img src="css/images/logo optimizado.png" alt="Frontera Computer" class="logo-img" style="height:36px;width:auto;vertical-align:middle;margin-right:8px;" /><span class="brand-text" style="vertical-align:middle;">FRONTERA COMPUTER</span></a></h1>
+        <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="navigation">☰</button>
+        <nav id="navigation" aria-label="Navegación principal">
+          <ul>
+            <li><a href="#top"><strong>Inicio</strong></a></li>
+            <li><a href="#servicios"><strong>Soporte</strong></a></li>
+            <li><a href="#ofertas"><strong>Ofertas</strong></a></li>
+            <li><a href="#tienda"><strong>Tienda</strong></a></li>
+            <li class="last"><a href="#contacto"><strong>Contacto</strong></a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- End Header -->
+      <!-- Hero (slider eliminado) -->
+      <section class="hero" aria-label="Promoción destacada">
+        <div class="hero-flex" style="display:flex;align-items:center;justify-content:center;gap:36px;">
+          <div class="hero-img" style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;">
+            <style>
+@keyframes floatHero {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-24px) scale(1.045); }
+  100% { transform: translateY(0); }
+}
+.hero-img img:hover {
+  animation: floatHero 1s cubic-bezier(0.55,0,0.17,1) 1;
+}
+</style>
+<img src="css/images/fc.png" alt="FC" style="width:271px;max-width:67vw;height:auto;object-fit:contain;box-shadow:0 4px 16px rgba(0,0,0,0.07);border-radius:20px;margin-left:-88px;" loading="lazy" />
+          </div>
+          <div class="hero-inner">
+            <h2>TU TECNOLOGÍA AL MEJOR PRECIO</h2>
+            <p>Envíos a todo el país. Garantía y soporte.</p>
+            <a class="btn-cta" href="#ofertas" aria-label="Ver productos en oferta">Ver ofertas</a>
+          </div>
+        </div>
+      </section>
+      <!-- End Hero -->
+          </div>
+  </div>
+  <!-- Top -->
+  <!-- Main -->
+  <div id="main" role="main">
+    <div class="shell">
+      <!-- Search, etc -->
+      <div class="options">
+        <div class="search">
+          <form action="#" method="get" role="search" aria-label="Buscar en la tienda">
+            <span class="field">
+              <input type="search" name="q" placeholder="Buscar productos" aria-label="Buscar" />
+            </span>
+            <input type="submit" class="search-submit" value="Buscar" />
+          </form>
+        </div>
+        <span class="left"><a href="#" id="advanced-search-link">Búsqueda Avanzada</a></span>
+        <div class="right"> <span class="cart"> <a href="#" class="cart-ico" aria-label="Carrito de compras">&nbsp;</a> <span class="cart-count" aria-label="Artículos en el carrito">0</span> <strong>$0.00</strong> </span> <span class="left more-links"> <a href="#" id="cart-checkout">Pagar</a> <a href="#" id="cart-details">Detalles</a> </span> </div>
+      </div>
+      <!-- End Search, etc -->
+      <!-- Content -->
+      <div id="content">
+        <!-- Tabs -->
+        <div class="tabs">
+          <ul role="tablist" aria-label="Categorías de productos">
+            <li><a href="#panel-1" class="active" role="tab" aria-selected="true" aria-controls="panel-1" tabindex="0"><span>Laptops</span></a></li>
+            <li><a href="#panel-2" role="tab" aria-selected="false" aria-controls="panel-2" tabindex="-1"><span>Teclados</span></a></li>
+            <li><a href="#panel-3" class="red" role="tab" aria-selected="false" aria-controls="panel-3" tabindex="-1"><span>Accesorios</span></a></li>
+          </ul>
+        </div>
+        <!-- Tabs -->
+        <!-- Container -->
+        <div id="tienda"></div>
+        <div id="container">
+          <div class="tabbed">
+            <!-- First Tab Content -->
+            <div id="panel-1" class="tab-content" role="tabpanel" aria-labelledby="panel-1" style="display:block;">
+              <div class="items">
+                <div class="cl">&nbsp;</div>
+                <ul>
+                  <li>
+                    <div class="image"> <a href="#"><img src="css/images/LAPTOP LENOVO.png" alt="Laptop HP" style="object-fit:cover;width:100%;height:150px;background:#fff;" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Laptop HP 15"</span><br />
+                      Procesador: <span>Intel Core i5</span><br />
+                      Memoria RAM: <span>8GB</span><br />
+                      Almacenamiento: <span>512GB SSD</span> </p>
+                    <p class="price">Precio: <strong>$650 USD</strong></p>
+                  </li>
+                  <li>
+                    <div class="image"> <a href="#"><img src="css/images/71C4QI2+sOL.jpg" alt="Laptop Dell Inspiron" style="object-fit:cover;width:100%;height:150px;background:#fff;" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Laptop Dell Inspiron</span><br />
+                      Procesador: <span>Intel Core i7</span><br />
+                      Memoria RAM: <span>16GB</span><br />
+                      Almacenamiento: <span>1TB SSD</span> </p>
+                    <p class="price">Precio: <strong>$950 USD</strong></p>
+                  </li>
+                  <li>
+                    <div class="image"> <a href="#"><img src="css/images/LaptopLenovo.png" alt="Laptop Lenovo ThinkPad" style="object-fit:cover;width:100%;height:150px;background:#fff;" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Laptop Lenovo ThinkPad</span><br />
+                      Procesador: <span>AMD Ryzen 5</span><br />
+                      Memoria RAM: <span>8GB</span><br />
+                      Almacenamiento: <span>256GB SSD</span> </p>
+                    <p class="price">Precio: <strong>$700 USD</strong></p>
+                  </li>
+                  <li>
+                    <div class="image"> <a href="#"><img src="css/images/ASUS.jpg" alt="Laptop Asus VivoBook" style="object-fit:cover;width:100%;height:150px;background:#fff;" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Laptop Asus VivoBook</span><br />
+                      Procesador: <span>Intel Core i3</span><br />
+                      Memoria RAM: <span>4GB</span><br />
+                      Almacenamiento: <span>128GB SSD</span> </p>
+                    <p class="price">Precio: <strong>$400 USD</strong></p>
+                  </li>
+                  <!-- Laptops adicionales -->
+                  <li data-gallery="css/images/HP Pavilion 14.jpeg" data-desc="HP Pavilion 14 con diseño delgado y rendimiento ágil para trabajo y estudio diario.">
+                    <div class="image"> <a href="#"><img src="css/images/HP Pavilion 14.jpeg" alt="HP Pavilion 14" loading="lazy" /></a> </div>
+                    <p> Producto: <span>HP Pavilion 14</span><br />
+                      Procesador: <span>Intel Core i5</span><br />
+                      Memoria RAM: <span>8GB</span><br />
+                      Almacenamiento: <span>256GB SSD</span> </p>
+                    <p class="price">Precio: <strong>$620 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/Acer Aspire 5.jpeg" data-desc="Acer Aspire 5 con Ryzen 5 para multitarea fluida y batería de larga duración.">
+                    <div class="image"> <a href="#"><img src="css/images/Acer Aspire 5.jpeg" alt="Acer Aspire 5" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Acer Aspire 5</span><br />
+                      Procesador: <span>AMD Ryzen 5</span><br />
+                      Memoria RAM: <span>8GB</span><br />
+                      Almacenamiento: <span>512GB SSD</span> </p>
+                    <p class="price">Precio: <strong>$580 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/Dell XPS 13.jpeg" data-desc="Dell XPS 13, ultraportátil premium con pantalla nítida para profesionales exigentes.">
+                    <div class="image"> <a href="#"><img src="css/images/Dell XPS 13.jpeg" alt="Dell XPS 13" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Dell XPS 13</span><br />
+                      Procesador: <span>Intel Core i7</span><br />
+                      Memoria RAM: <span>16GB</span><br />
+                      Almacenamiento: <span>512GB SSD</span> </p>
+                    <p class="price">Precio: <strong>$1200 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/Lenovo IdeaPad 3.jpeg" data-desc="Lenovo IdeaPad 3, equilibrio entre rendimiento y valor para tareas cotidianas.">
+                    <div class="image"> <a href="#"><img src="css/images/Lenovo IdeaPad 3.jpeg" alt="Lenovo IdeaPad 3" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Lenovo IdeaPad 3</span><br />
+                      Procesador: <span>Intel Core i5</span><br />
+                      Memoria RAM: <span>8GB</span><br />
+                      Almacenamiento: <span>256GB SSD</span> </p>
+                    <p class="price">Precio: <strong>$520 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/ASUS TUF Gaming F15.jpeg" data-desc="ASUS TUF Gaming F15, listo para juegos con chasis resistente y potencia dedicada.">
+                    <div class="image"> <a href="#"><img src="css/images/ASUS TUF Gaming F15.jpeg" alt="ASUS TUF Gaming F15" loading="lazy" /></a> </div>
+                    <p> Producto: <span>ASUS TUF Gaming F15</span><br />
+                      Procesador: <span>Intel Core i5</span><br />
+                      Memoria RAM: <span>16GB</span><br />
+                      Almacenamiento: <span>512GB SSD</span> </p>
+                    <p class="price">Precio: <strong>$950 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/MSI GF63 Thin.jpeg" data-desc="MSI GF63 Thin con diseño ligero, perfecto para gaming y productividad.">
+                    <div class="image"> <a href="#"><img src="css/images/MSI GF63 Thin.jpeg" alt="MSI GF63 Thin" loading="lazy" /></a> </div>
+                    <p> Producto: <span>MSI GF63 Thin</span><br />
+                      Procesador: <span>Intel Core i5</span><br />
+                      Memoria RAM: <span>16GB</span><br />
+                      Almacenamiento: <span>512GB SSD</span> </p>
+                    <p class="price">Precio: <strong>$899 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/Apple MacBook Air.jpeg" data-desc="MacBook Air con chip Apple M1: silencioso, eficiente y potente para todo el día.">
+                    <div class="image"> <a href="#"><img src="css/images/Apple MacBook Air.jpeg" alt="Apple MacBook Air M1" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Apple MacBook Air</span><br />
+                      Procesador: <span>Apple M1</span><br />
+                      Memoria RAM: <span>8GB</span><br />
+                      Almacenamiento: <span>256GB SSD</span> </p>
+                    <p class="price">Precio: <strong>$999 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/Huawei MateBook D16.jpeg" data-desc="Huawei MateBook D16 con pantalla amplia para productividad y estudio.">
+                    <div class="image"> <a href="#"><img src="css/images/Huawei MateBook D16.jpeg" alt="Huawei MateBook D16" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Huawei MateBook D16</span><br />
+                      Procesador: <span>Intel Core i5</span><br />
+                      Memoria RAM: <span>16GB</span><br />
+                      Almacenamiento: <span>512GB SSD</span> </p>
+                    <p class="price">Precio: <strong>$800 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/Samsung Galaxy Book.jpeg" data-desc="Samsung Galaxy Book, ligero y rápido con gran autonomía.">
+                    <div class="image"> <a href="#"><img src="css/images/Samsung Galaxy Book.jpeg" alt="Samsung Galaxy Book" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Samsung Galaxy Book</span><br />
+                      Procesador: <span>Intel Core i5</span><br />
+                      Memoria RAM: <span>8GB</span><br />
+                      Almacenamiento: <span>256GB SSD</span> </p>
+                    <p class="price">Precio: <strong>$700 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/Lenovo Flex 5.jpeg" data-desc="Lenovo Flex 5 Chromebook: versátil 2 en 1 para navegar y estudiar.">
+                    <div class="image"> <a href="#"><img src="css/images/Lenovo Flex 5.jpeg" alt="Lenovo Flex 5 Chromebook" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Lenovo Flex 5 Chromebook</span><br />
+                      Procesador: <span>Intel Core i3</span><br />
+                      Memoria RAM: <span>8GB</span><br />
+                      Almacenamiento: <span>128GB SSD</span> </p>
+                    <p class="price">Precio: <strong>$450 USD</strong></p>
+                  </li>
+                </ul>
+                <div class="cl">&nbsp;</div>
+              </div>
+            </div>
+            <!-- End First Tab Content -->
+            <!-- Second Tab Content -->
+            <div id="panel-2" class="tab-content" role="tabpanel" aria-labelledby="panel-2" hidden>
+              <div class="items">
+                <div class="cl">&nbsp;</div>
+                <ul>
+                  <li data-gallery="css/images/Teclado Mecánico RGB.png">
+                    <div class="image"> <a href="#"><img src="css/images/Teclado Mecánico RGB.png" alt="Teclado Mecánico RGB" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Teclado Mecánico RGB</span><br />
+                      Marca: <span>Redragon</span><br />
+                      Tipo: <span>Mecánico</span><br />
+                      Iluminación: <span>RGB</span> </p>
+                    <p class="price">Precio: <strong>$60 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/Teclado Inalámbrico.jpg,css/images/Logitech.png">
+                    <div class="image"> <a href="#"><img src="css/images/Teclado Inalámbrico.jpg" alt="Teclado Inalámbrico" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Teclado Inalámbrico</span><br />
+                      Marca: <span>Logitech</span><br />
+                      Tipo: <span>Membrana</span><br />
+                      Conectividad: <span>Bluetooth</span> </p>
+                    <p class="price">Precio: <strong>$45 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/Teclado Gamer.jpg">
+                    <div class="image"> <a href="#"><img src="css/images/Teclado Gamer.jpg" alt="Teclado Gamer" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Teclado Gamer</span><br />
+                      Marca: <span>HyperX</span><br />
+                      Tipo: <span>Mecánico</span><br />
+                      Iluminación: <span>LED</span> </p>
+                    <p class="price">Precio: <strong>$80 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/Teclado Compacto.png">
+                    <div class="image"> <a href="#"><img src="css/images/Teclado Compacto.png" alt="Teclado Compacto" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Teclado Compacto</span><br />
+                      Marca: <span>Microsoft</span><br />
+                      Tipo: <span>Membrana</span><br />
+                      Conectividad: <span>USB</span> </p>
+                    <p class="price">Precio: <strong>$30 USD</strong></p>
+                  </li>
+                  <!-- Teclados adicionales -->
+                  <li data-gallery="css/images/titan-k7.png" data-desc="Teclado Mecánico Titan K7, RGB, compacto y silencioso, ideal para oficina y gaming.">
+                  <div class="image"> <a href="#"><img src="css/images/titan-k7.png" alt="Teclado Mecánico Titan K7" loading="lazy" /></a> </div>
+                  <p> Producto: <span>Teclado Mecánico Titan K7</span><br />
+                  Marca: <span>Titan</span><br />
+                  Tipo: <span>Mecánico</span><br />
+                  Conectividad: <span>USB-C</span> </p>
+                  <p class="price">Precio: <strong>$119 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/Razer BlackWidow V3.jpg" data-desc="Razer BlackWidow V3 con iluminación Chroma para máxima personalización.">
+                    <div class="image"> <a href="#"><img src="css/images/Razer BlackWidow V3.jpg" alt="Razer BlackWidow V3" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Razer BlackWidow V3</span><br />
+                      Marca: <span>Razer</span><br />
+                      Tipo: <span>Mecánico</span><br />
+                      Conectividad: <span>Cableado USB</span> </p>
+                    <p class="price">Precio: <strong>$139 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/Corsair K55 RGB.jpg" data-desc="Corsair K55 RGB, membrana silenciosa con controles multimedia dedicados.">
+                    <div class="image"> <a href="#"><img src="css/images/Corsair K55 RGB.jpg" alt="Corsair K55 RGB" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Corsair K55 RGB</span><br />
+                      Marca: <span>Corsair</span><br />
+                      Tipo: <span>Membrana</span><br />
+                      Conectividad: <span>Cableado USB</span> </p>
+                    <p class="price">Precio: <strong>$59 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/HyperX Alloy FPS Pro.jpg" data-desc="HyperX Alloy FPS Pro, diseño tenkeyless para máximo espacio de mouse.">
+                    <div class="image"> <a href="#"><img src="css/images/HyperX Alloy FPS Pro.jpg" alt="HyperX Alloy FPS Pro" loading="lazy" /></a> </div>
+                    <p> Producto: <span>HyperX Alloy FPS Pro</span><br />
+                      Marca: <span>HyperX</span><br />
+                      Tipo: <span>Mecánico</span><br />
+                      Conectividad: <span>Cableado USB</span> </p>
+                    <p class="price">Precio: <strong>$89 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/SteelSeries Apex 3.png" data-desc="SteelSeries Apex 3, resistente a salpicaduras y retroiluminación discreta.">
+                    <div class="image"> <a href="#"><img src="css/images/SteelSeries Apex 3.png" alt="SteelSeries Apex 3" loading="lazy" /></a> </div>
+                    <p> Producto: <span>SteelSeries Apex 3</span><br />
+                      Marca: <span>SteelSeries</span><br />
+                      Tipo: <span>Membrana</span><br />
+                      Conectividad: <span>Cableado USB</span> </p>
+                    <p class="price">Precio: <strong>$49 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/Logitech MX Keys.jpg,css/images/Logitech.png" data-desc="Logitech MX Keys, escritura cómoda y silenciosa para profesionales.">
+                    <div class="image"> <a href="#"><img src="css/images/Logitech MX Keys.jpg" alt="Logitech MX Keys" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Logitech MX Keys</span><br />
+                      Marca: <span>Logitech</span><br />
+                      Tipo: <span>Membrana Premium</span><br />
+                      Conectividad: <span>Bluetooth</span> </p>
+                    <p class="price">Precio: <strong>$99 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/Redragon Kumara K552.png" data-desc="Redragon Kumara K552, compacto y durable, ideal para empezar en mecánicos.">
+                    <div class="image"> <a href="#"><img src="css/images/Redragon Kumara K552.png" alt="Redragon Kumara K552" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Redragon Kumara K552</span><br />
+                      Marca: <span>Redragon</span><br />
+                      Tipo: <span>Mecánico</span><br />
+                      Conectividad: <span>Cableado USB</span> </p>
+                    <p class="price">Precio: <strong>$39 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/Ducky One 2 Mini.png" data-desc="Ducky One 2 Mini, 60% minimalista con alta calidad de construcción.">
+                    <div class="image"> <a href="#"><img src="css/images/Ducky One 2 Mini.png" alt="Ducky One 2 Mini" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Ducky One 2 Mini</span><br />
+                      Marca: <span>Ducky</span><br />
+                      Tipo: <span>Mecánico</span><br />
+                      Conectividad: <span>Cableado USB-C</span> </p>
+                    <p class="price">Precio: <strong>$109 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/Keychron K2 Wireless.png" data-desc="Keychron K2 Wireless, versatilidad inalámbrica con formato compacto.">
+                    <div class="image"> <a href="#"><img src="css/images/Keychron K2 Wireless.png" alt="Keychron K2 Wireless" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Keychron K2 Wireless</span><br />
+                      Marca: <span>Keychron</span><br />
+                      Tipo: <span>Mecánico</span><br />
+                      Conectividad: <span>Bluetooth</span> </p>
+                    <p class="price">Precio: <strong>$89 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/Microsoft Ergonomic Keyboard.jpg" data-desc="Microsoft Ergonomic Keyboard para largas jornadas de trabajo sin fatiga.">
+                    <div class="image"> <a href="#"><img src="css/images/Microsoft Ergonomic Keyboard.jpg" alt="Microsoft Ergonomic Keyboard" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Microsoft Ergonomic Keyboard</span><br />
+                      Marca: <span>Microsoft</span><br />
+                      Tipo: <span>Ergonómico</span><br />
+                      Conectividad: <span>Cableado USB</span> </p>
+                    <p class="price">Precio: <strong>$69 USD</strong></p>
+                  </li>
+                </ul>
+                <div class="cl">&nbsp;</div>
+              </div>
+            </div>
+            <!-- End Second Tab Content -->
+            <!-- Third Tab Content -->
+            <div id="panel-3" class="tab-content" role="tabpanel" aria-labelledby="panel-3" hidden>
+              <div class="items">
+                <div class="cl">&nbsp;</div>
+                <ul>
+                  <li data-gallery="css/images/Mouse Logitech.jpg">
+                    <div class="image"> <a href="#"><img src="css/images/Mouse Logitech.jpg" alt="Mouse Gamer" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Mouse Gamer</span><br />
+                      Marca: <span>Logitech</span><br />
+                      DPI: <span>16000</span><br />
+                      Conectividad: <span>USB</span> </p>
+                    <p class="price">Precio: <strong>$40 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/Audífonos Inalámbricos.png">
+                    <div class="image"> <a href="#"><img src="css/images/Audífonos Inalámbricos.png" alt="Audífonos Inalámbricos" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Audífonos Inalámbricos</span><br />
+                      Marca: <span>Sony</span><br />
+                      Tipo: <span>Bluetooth</span><br />
+                      Micrófono: <span>Sí</span> </p>
+                    <p class="price">Precio: <strong>$120 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/Webcam Full HD.jpg" data-desc="Webcam Full HD para videollamadas nítidas.">
+                    <div class="image"> <a href="#"><img src="css/images/Webcam Full HD.jpg" alt="Webcam Full HD" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Webcam Full HD</span><br />
+                      Marca: <span>Logitech</span><br />
+                      Resolución: <span>1080p</span><br />
+                      Micrófono: <span>Integrado</span> </p>
+                    <p class="price">Precio: <strong>$55 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/Memoria USB 64GB.jpg">
+                    <div class="image"> <a href="#"><img src="css/images/Memoria USB 64GB.jpg" alt="Memoria USB 64GB" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Memoria USB 64GB</span><br />
+                      Marca: <span>Kingston</span><br />
+                      Velocidad: <span>USB 3.0</span><br />
+                      Capacidad: <span>64GB</span> </p>
+                    <p class="price">Precio: <strong>$15 USD</strong></p>
+                  </li>
+                  <!-- Accesorios adicionales -->
+                  <li data-gallery="css/images/Mouse Logitech.jpg,css/images/Logitech.png" data-desc="Mouse ergonómico con precisión de nivel profesional para productividad.">
+                    <div class="image"> <a href="#"><img src="css/images/Mouse Logitech.jpg" alt="Mouse Logitech MX Master 3" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Mouse Logitech MX Master 3</span><br />
+                      Marca: <span>Logitech</span><br />
+                      DPI: <span>4000</span><br />
+                      Conectividad: <span>Bluetooth</span> </p>
+                    <p class="price">Precio: <strong>$99 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/Hub USB-C 7 en 1.jpg" data-desc="Hub USB-C 7 en 1: puertos esenciales para tu laptop moderna.">
+                    <div class="image"> <a href="#"><img src="css/images/Hub USB-C 7 en 1.jpg" alt="Hub USB-C 7 en 1" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Hub USB-C 7 en 1</span><br />
+                      Marca: <span>Anker</span><br />
+                      Puertos: <span>HDMI/USB/SD</span><br />
+                      Compatibilidad: <span>Windows/Mac</span> </p>
+                    <p class="price">Precio: <strong>$35 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/SSD Externo 1TB.jpeg" data-desc="SSD externo 1TB: velocidades altas para copias y proyectos creativos.">
+                    <div class="image"> <a href="#"><img src="css/images/SSD Externo 1TB.jpeg" alt="SSD Externo 1TB" loading="lazy" /></a> </div>
+                    <p> Producto: <span>SSD Externo 1TB</span><br />
+                      Marca: <span>Samsung</span><br />
+                      Interfaz: <span>USB-C</span><br />
+                      Velocidad: <span>Hasta 1050MB/s</span> </p>
+                    <p class="price">Precio: <strong>$119 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/Router WiFi 6.jpg" data-desc="Router WiFi 6: mayor cobertura y más dispositivos sin cortes.">
+                    <div class="image"> <a href="#"><img src="css/images/Router WiFi 6.jpg" alt="Router WiFi 6" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Router WiFi 6</span><br />
+                      Marca: <span>TP-Link</span><br />
+                      Banda: <span>Dual Band</span><br />
+                      Estándar: <span>802.11ax</span> </p>
+                    <p class="price">Precio: <strong>$129 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/Memoria RAM 16GB DDR4.png" data-desc="Memoria RAM DDR4 16GB para acelerar tu equipo en tareas pesadas.">
+                    <div class="image"> <a href="#"><img src="css/images/Memoria RAM 16GB DDR4.png" alt="Memoria RAM 16GB DDR4" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Memoria RAM 16GB DDR4</span><br />
+                      Marca: <span>Corsair</span><br />
+                      Frecuencia: <span>3200MHz</span><br />
+                      Tipo: <span>DDR4</span> </p>
+                    <p class="price">Precio: <strong>$55 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/Disco Duro 2TB.jpg" data-desc="Disco duro externo 2TB para respaldo de fotos, documentos y videos.">
+                    <div class="image"> <a href="#"><img src="css/images/Disco Duro 2TB.jpg" alt="Disco Duro 2TB" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Disco Duro 2TB</span><br />
+                      Marca: <span>Seagate</span><br />
+                      Interfaz: <span>USB 3.0</span><br />
+                      Tipo: <span>2.5"</span> </p>
+                    <p class="price">Precio: <strong>$59 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/Bocinas Bluetooth.jpg" data-desc="Bocinas Bluetooth portátiles con sonido claro y batería de larga duración.">
+                    <div class="image"> <a href="#"><img src="css/images/Bocinas Bluetooth.jpg" alt="Bocinas Bluetooth" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Bocinas Bluetooth</span><br />
+                      Marca: <span>JBL</span><br />
+                      Potencia: <span>20W</span><br />
+                      Resistencia: <span>IPX7</span> </p>
+                    <p class="price">Precio: <strong>$39 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/Protector de pantalla de 15.6 pulgadas.jpg" data-desc="Protector de pantalla de 15.6 pulgadas antirreflejo para cuidar tu laptop.">
+                    <div class="image"> <a href="#"><img src="css/images/Protector de pantalla de 15.6 pulgadas.jpg" alt="Protector de pantalla de 15.6 pulgadas" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Protector de pantalla de 15.6 pulgadas</span><br />
+                      Marca: <span>Generic</span><br />
+                      Tipo: <span>Anti-reflejo</span><br />
+                      Compatibilidad: <span>15.6"</span> </p>
+                    <p class="price">Precio: <strong>$15 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/Webcam 4k.png" data-desc="Webcam 4K con enfoque automático para videollamadas nítidas.">
+                    <div class="image"> <a href="#"><img src="css/images/Webcam 4k.png" alt="Webcam 4K" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Webcam 4K</span><br />
+                      Marca: <span>Logitech</span><br />
+                      Resolución: <span>4K</span><br />
+                      Micrófono: <span>Integrado</span> </p>
+                    <p class="price">Precio: <strong>$130 USD</strong></p>
+                  </li>
+                  <li data-gallery="css/images/microfono usb.png" data-desc="Micrófono USB para streaming y reuniones con audio claro.">
+                    <div class="image"> <a href="#"><img src="css/images/microfono usb.png" alt="Micrófono USB" loading="lazy" /></a> </div>
+                    <p> Producto: <span>Micrófono USB</span><br />
+                      Marca: <span>Blue</span><br />
+                      Conectividad: <span>USB</span><br />
+                      Patrón: <span>Cardioide</span> </p>
+                    <p class="price">Precio: <strong>$65 USD</strong></p>
+                  </li>
+                </ul>
+                <div class="cl">&nbsp;</div>
+              </div>
+            </div>
+            <!-- End Third Tab Content -->
+          </div>
+          <!-- Ofertas -->
+          <section class="offers" id="ofertas" aria-label="Productos en oferta">
+            <h2>Ofertas</h2>
+            <div class="items">
+              <div class="cl">&nbsp;</div>
+              <ul>
+                <li>
+                  <span class="badge-offer">Oferta</span>
+                  <div class="image"> <a href="#"><img src="css/images/HP Pavilion 14.jpeg" alt="HP Pavilion 14 en oferta" loading="lazy" /></a> </div>
+                  <p> Producto: <span>HP Pavilion 14</span><br />
+                    Procesador: <span>Intel Core i5</span><br />
+                    Memoria RAM: <span>8GB</span><br />
+                    Almacenamiento: <span>256GB SSD</span> </p>
+                  <p class="price"><del>$699.00 USD</del> <ins><strong>$620.00 USD</strong></ins></p>
+                </li>
+                <li>
+                  <span class="badge-offer">Oferta</span>
+                  <div class="image"> <a href="#"><img src="css/images/Acer Aspire 5.jpeg" alt="Acer Aspire 5 en oferta" loading="lazy" /></a> </div>
+                  <p> Producto: <span>Acer Aspire 5</span><br />
+                    Procesador: <span>AMD Ryzen 5</span><br />
+                    Memoria RAM: <span>8GB</span><br />
+                    Almacenamiento: <span>512GB SSD</span> </p>
+                  <p class="price"><del>$629.00 USD</del> <ins><strong>$580.00 USD</strong></ins></p>
+                </li>
+                <li>
+                  <span class="badge-offer">Oferta</span>
+                  <div class="image"> <a href="#"><img src="css/images/Lenovo IdeaPad 3.jpeg" alt="Lenovo IdeaPad 3 en oferta" loading="lazy" /></a> </div>
+                  <p> Producto: <span>Lenovo IdeaPad 3</span><br />
+                    Procesador: <span>Intel Core i5</span><br />
+                    Memoria RAM: <span>8GB</span><br />
+                    Almacenamiento: <span>256GB SSD</span> </p>
+                  <p class="price"><del>$560.00 USD</del> <ins><strong>$520.00 USD</strong></ins></p>
+                </li>
+                <li>
+                  <span class="badge-offer">Oferta</span>
+                  <div class="image"> <a href="#"><img src="css/images/MSI GF63 Thin.jpeg" alt="MSI GF63 Thin en oferta" loading="lazy" /></a> </div>
+                  <p> Producto: <span>MSI GF63 Thin</span><br />
+                    Procesador: <span>Intel Core i5</span><br />
+                    Memoria RAM: <span>16GB</span><br />
+                    Almacenamiento: <span>512GB SSD</span> </p>
+                  <p class="price"><del>$949.00 USD</del> <ins><strong>$899.00 USD</strong></ins></p>
+                </li>
+              </ul>
+              <div class="cl">&nbsp;</div>
+            </div>
+          </section>
+          <!-- Institucional (MVV) -->
+          <section class="about-cards" id="mvv" aria-label="Misión, visión y valores">
+            <h2>Misión, Visión y Valores</h2>
+            <div class="grid">
+              <article class="about-card mission">
+                <div class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <circle cx="12" cy="12" r="5" fill="#fff"></circle>
+                    <circle cx="12" cy="12" r="2"></circle>
+                  </svg>
+                </div>
+                <h3>Misión</h3>
+                <p>Proveer soluciones tecnológicas confiables y accesibles, con atención cercana y soporte profesional que faciliten la vida y el trabajo de nuestros clientes.</p>
+              </article>
+              <article class="about-card vision">
+                <div class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 5c-5 0-9 7-9 7s4 7 9 7 9-7 9-7-4-7-9-7zm0 11a4 4 0 110-8 4 4 0 010 8z"></path>
+                  </svg>
+                </div>
+                <h3>Visión</h3>
+                <p>Ser la tienda de referencia en tecnología de nuestra región, destacando por excelencia en servicio, innovación constante y compromiso con la satisfacción del cliente.</p>
+              </article>
+              <article class="about-card values">
+                <div class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.1L12 17.8 6.4 20l1.1-6.1L3 9.6l6.2-.9L12 3z"></path>
+                  </svg>
+                </div>
+                <h3>Valores</h3>
+                <ul>
+                  <li>Compromiso con el cliente</li>
+                  <li>Honestidad y transparencia</li>
+                  <li>Calidad y responsabilidad</li>
+                  <li>Innovación y aprendizaje continuo</li>
+                  <li>Trabajo en equipo</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <!-- Servicios y Reparaciones -->
+          <section class="services" id="servicios" aria-label="Servicios y reparaciones">
+            <h2>Servicios y Reparaciones</h2>
+            <p class="lead">Solicita reparación de laptop, mantenimiento de PC o instalación de cámaras. Completa el formulario y te contactaremos.</p>
+            <form id="service-form" action="send_mail.php" method="post" novalidate>
+              <div>
+                <label for="sv-nombre">Nombre completo</label>
+                <input type="text" id="sv-nombre" name="nombre" required />
+              </div>
+              <div>
+                <label for="sv-telefono">Teléfono</label>
+                <input type="tel" id="sv-telefono" name="telefono" required />
+              </div>
+              <div>
+                <label for="sv-email">Correo electrónico (opcional)</label>
+                <input type="email" id="sv-email" name="email" />
+              </div>
+              <div>
+                <label for="sv-servicio">Tipo de servicio</label>
+                <select id="sv-servicio" name="servicio">
+                  <option value="Reparación de laptop">Reparación de laptop</option>
+                  <option value="Mantenimiento de PC">Mantenimiento de PC</option>
+                  <option value="Instalación de cámaras">Instalación de cámaras</option>
+                  <option value="Cotización de equipos">Cotización de equipos</option>
+                </select>
+              </div>
+              <div class="full">
+                <label for="sv-descripcion">Descripción del problema o requerimiento</label>
+                <textarea id="sv-descripcion" name="descripcion" placeholder="Describe la falla o el servicio que necesitas"></textarea>
+              </div>
+              <div class="full">
+                <label for="sv-direccion">Dirección/Ubicación (opcional)</label>
+                <input type="text" id="sv-direccion" name="direccion" />
+              </div>
+              <div class="full actions">
+                <button type="button" id="ws-submit" class="btn">Enviar por WhatsApp</button>
+              </div>
+            </form>
+          </section>
+          <!-- Fin Servicios y Reparaciones -->
+
+          <!-- Marcas Aliadas Mejoradas -->
+          <section class="brands-carousel" aria-label="Marcas Destacadas">
+            <h2 style="text-align:center; margin-bottom:18px; text-transform:uppercase; letter-spacing:1px; color:#333;">Marcas Destacadas</h2>
+            <div class="brands-track">
+              <div class="brand-item"><img src="css/images/HP1.jpg" alt="HP" loading="lazy" /></div>
+              <div class="brand-item"><img src="css/images/DELL1.jpg" alt="Dell" loading="lazy" /></div>
+              <div class="brand-item"><img src="css/images/Lenovo1.png" alt="Lenovo" loading="lazy" /></div>
+              <div class="brand-item"><img src="css/images/acer1.jpg" alt="Acer" loading="lazy" /></div>
+              <div class="brand-item"><img src="css/images/KINGSTON1.png" alt="Kingston" loading="lazy" /></div>
+            </div>
+          </section>
+          <style>
+            .brands-carousel {
+              background: #f7f7f7;
+              padding: 32px 0 24px;
+              border-radius: 18px;
+              margin: 32px 0 24px;
+              box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+            }
+            .brands-track {
+              display: flex;
+              gap: 32px;
+              overflow-x: auto;
+              padding: 8px 0 8px 8px;
+              scrollbar-width: thin;
+              scrollbar-color: #ecb319 #eee;
+            }
+            .brands-track::-webkit-scrollbar {
+              height: 8px;
+              background: #eee;
+            }
+            .brands-track::-webkit-scrollbar-thumb {
+              background: #ecb319;
+              border-radius: 4px;
+            }
+            .brand-item {
+              flex: 0 0 120px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: #fff;
+              border-radius: 12px;
+              box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+              padding: 18px 12px;
+              transition: transform 0.2s, box-shadow 0.2s;
+            }
+            .brand-item img {
+              max-width: 90px;
+              max-height: 48px;
+              filter: grayscale(0.2) contrast(1.1);
+              transition: filter 0.2s, transform 0.2s;
+            }
+            .brand-item:hover, .brand-item:focus-within {
+              transform: scale(1.08);
+              box-shadow: 0 4px 18px rgba(236,179,25,0.13);
+              background: #fffbe6;
+            }
+            .brand-item:hover img, .brand-item:focus-within img {
+              filter: none;
+              transform: scale(1.08);
+            }
+            @media (max-width: 600px) {
+              .brands-track { gap: 16px; }
+              .brand-item { flex-basis: 90px; padding: 10px 4px; }
+              .brand-item img { max-width: 60px; max-height: 32px; }
+            }
+          </style>
+          <!-- Fin Marcas Aliadas Mejoradas -->
+          <!-- Redes sociales (abajo) -->
+          <section class="social" id="contacto" aria-label="Redes sociales">
+            <span class="label">Síguenos:</span>
+            <a class="social-link facebook" href="https://www.facebook.com/maylon.batista.79" target="_blank" rel="noopener">
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07c0 5.02 3.66 9.19 8.44 9.97v-7.05H7.9v-2.92h2.54V9.41c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.46h-1.25c-1.23 0-1.61.76-1.61 1.54v1.85h2.74l-.44 2.92h-2.3v7.05C18.34 21.26 22 17.09 22 12.07z"></path></svg>
+              </span>
+              <span class="text">Facebook</span>
+            </a>
+            <a class="social-link instagram" href="https://www.instagram.com/fronteracomputer" target="_blank" rel="noopener">
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3h10zm-5 3.5A5.5 5.5 0 106 13.5 5.5 5.5 0 0012 7.5zm0 2A3.5 3.5 0 118.5 13 3.5 3.5 0 0112 9.5zm4.75-3.5a1.25 1.25 0 11-1.25 1.25A1.25 1.25 0 0116.75 6z"></path></svg>
+              </span>
+              <span class="text">Instagram</span>
+            </a>
+            <a class="social-link youtube" href="https://www.youtube.com/@Batista1515" target="_blank" rel="noopener">
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.7 3.5 12 3.5 12 3.5s-7.7 0-9.4.6A3 3 0 00.5 6.2 31 31 0 000 12a31 31 0 00.5 5.8 3 3 0 002.1 2.1C4.3 20.5 12 20.5 12 20.5s7.7 0 9.4-.6a3 3 0 002.1-2.1A31 31 0 0024 12a31 31 0 00-.5-5.8zM9.8 15.5v-7l6 3.5-6 3.5z"></path></svg>
+              </span>
+              <span class="text">YouTube</span>
+            </a>
+            <a class="social-link whatsapp" href="https://wa.me/18495061763?text=Chatea%20en%20WhatsApp%20con%20FRONTERACOMPUTER" target="_blank" rel="noopener" aria-label="Chatea en WhatsApp con FRONTERACOMPUTER" title="Chatea en WhatsApp con FRONTERACOMPUTER">
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.5 11.5 0 006.1 18.9L2 22l3.2-4.2A11.5 11.5 0 1020.5 3.5zm-8.7 14.9a9 9 0 01-4.6-1.3l-.3-.2-2.7.7.7-2.6-.2-.3a9 9 0 111-1.2l.3.2a8.6 8.6 0 003.9 1.1h.3c.4 0 .7 0 1-.1.3-.1.6-.1.9-.2.3-.1.6-.2.8-.3l.2-.1c.1-.1.3-.1.4-.2l.1-.1c.2-.1.3-.2.5-.3l.1-.1-.1-.2-.1-.1c-.1-.2-.3-.3-.4-.5l-.1-.1-.2-.3-.2-.3-.2-.4-.1-.2-.2-.4v-.2s0-.1-.1-.1l-.1-.1c-.1-.2-.3-.2-.4-.3h-.1l-.3-.1h-.1c-.1 0-.2 0-.3.1h-.1l-.2.1h-.1c-.2.1-.4.2-.6.4l-.1.1-.1.1-.2.3-.1.1c-.1.2-.1.4-.1.6 0 .3.1.6.2.9.1.3.3.6.4.9.2.3.5.5.8.8.3.2.6.4.9.5.3.1.6.2.9.2a3 3 0 001.4-.2l.1-.1.2-.1.4-.2.1-.1.3-.2.1-.1.3-.2.1-.1c.1-.1.2-.1.3-.2l.1-.1c.1-.1.2-.1.3-.2.1-.1.2-.1.2-.2.1-.1.2-.2.2-.3.1-.1.1-.2.2-.3.1-.2.1-.5.1-.7 0-.3-.1-.6-.2-.9a3 3 0 00-.3-.7l-.1-.1-.1-.2-.1-.1c-.1-.1-.2-.2-.4-.2h-.1c-.2 0-.3.1-.5.2-.2.1-.4.3-.5.4-.2.2-.4.4-.6.6l-.2.2c-.2.2-.3.5-.4.8-.1.3-.2.6-.2.9 0 .3.1.6.2.9.1.3.3.6.5.8.2.3.5.5.8.7.3.2.6.4.9.5.3.1.6.2.9.2.3 0 .6-.1.9-.2.3-.1.6-.2.9-.4.3-.2.6-.4.8-.6.3-.2.5-.4.7-.7.2-.3.3-.6.4-.9.1-.3.1-.6.1-.9 0-.4 0-.7-.1-1-.1-.3-.2-.6-.3-.9a6.7 6.7 0 00-.5-.9 4.9 4.9 0 00-.7-.8 4.8 4.8 0 00-.8-.6 6.3 6.3 0 00-1-.5c-.3-.1-.6-.2-.9-.3-.3-.1-.6-.1-.9-.1z"></path></svg>
+              </span>
+              <span class="text">Chatea en WhatsApp con FRONTERACOMPUTER</span>
+            </a>
+          </section>
+          <!-- Footer Simple -->
+          <footer style="background:#23272b; color:#f3f3f3; text-align:center; padding:28px 8px 20px; font-size:15px; margin-top:32px; border-top:1px solid #333;">
+            <div style="max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;">
+              <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;align-items:center;">
+                <a href="#privacidad" style="color:#ecb319; text-decoration:none;">Política de Privacidad</a>
+                <span style="color:#555;">|</span>
+                <a href="#terminos" style="color:#ecb319; text-decoration:none;">Términos y Condiciones</a>
+                <span style="color:#555;">|</span>
+                <a href="#contacto" style="color:#ecb319; text-decoration:none;">Contacto</a>
+              </div>
+              <div style="color:#ccc;font-size:14px;">Correo: <a href="mailto:info@fronteracomputer.com" style="color:#ecb319;text-decoration:none;">info@fronteracomputer.com</a> &nbsp; | &nbsp; Teléfono: <a href="tel:+18495061763" style="color:#ecb319;text-decoration:none;">+1 849 506 1763</a></div>
+              <div style="color:#888;font-size:13px;"><a href="https://www.google.com/maps/place/Calle+Principal,+Local+2,+Laguna+Salada,+Dominican+Republic" target="_blank" style="color:#ecb319;text-decoration:none;">Calle Principal, Local 2, Laguna Salada, Dominican Republic</a></div>
+              <div style="margin-top:6px; color:#999; font-size:12px;">&copy; 2024 FRONTERA COMPUTER. Todos los derechos reservados.</div>
+            </div>
+          </footer>
+          <!-- Fin Footer Mejorado -->
+
+          <!-- Política de Privacidad Modal -->
+          <div id="privacidad-modal" class="custom-modal" style="display:none;position:fixed;z-index:4000;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.48);align-items:center;justify-content:center;">
+            <div class="custom-modal-content" style="background:#fff;max-width:480px;width:92vw;padding:36px 24px 28px 24px;border-radius:14px;box-shadow:0 8px 32px rgba(0,0,0,0.18);position:relative;">
+              <button type="button" class="custom-modal-close" style="position:absolute;right:10px;top:8px;background:none;border:0;font-size:20px;cursor:pointer;color:#888;" aria-label="Cerrar" onclick="document.getElementById('privacidad-modal').style.display='none';">&times;</button>
+              <h2 style="color:#000;text-align:center;margin-bottom:18px;font-size:1.4em;">Política de Privacidad</h2>
+              <p>En Frontera Computer valoramos tu privacidad. Tus datos personales enviados vía formularios, compra o contacto solo se utilizan para procesar solicitudes, mejorar nuestros servicios y ofrecer atención personalizada. No compartimos ni vendemos tus datos a terceros externos sin consentimiento salvo cumplimiento legal. Utilizamos tecnologías seguras (SSL) y prácticas responsables de gestión de información.</p>
+              <ul style="margin-top:14px;max-width:430px;margin-left:auto;margin-right:auto;">
+                <li>Solo solicitamos datos estrictamente necesarios para brindarte nuestros servicios.</li>
+                <li>Puedes solicitar acceso, rectificación o eliminación de tus datos escribiendo a <a href="mailto:info@fronteracomputer.com">info@fronteracomputer.com</a>.</li>
+                <li>No usamos cookies de seguimiento no esenciales.</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Fin Política de Privacidad Modal -->
+          <!-- Términos y Condiciones Modal -->
+          <div id="terminos-modal" class="custom-modal" style="display:none;position:fixed;z-index:4000;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.48);align-items:center;justify-content:center;">
+            <div class="custom-modal-content" style="background:#fff;max-width:480px;width:92vw;padding:36px 24px 28px 24px;border-radius:14px;box-shadow:0 8px 32px rgba(0,0,0,0.18);position:relative;">
+              <button type="button" class="custom-modal-close" style="position:absolute;right:10px;top:8px;background:none;border:0;font-size:20px;cursor:pointer;color:#888;" aria-label="Cerrar" onclick="document.getElementById('terminos-modal').style.display='none';">&times;</button>
+              <h2 style="color:#000;text-align:center;margin-bottom:18px;font-size:1.4em;">Términos y Condiciones</h2>
+              <p>El uso de este sitio implica la aceptación de nuestras condiciones. Los productos y servicios ofrecidos están sujetos a disponibilidad y cambios sin previo aviso. Nos reservamos el derecho a actualizar información y políticas en cualquier momento.</p>
+              <ul style="margin-top:14px;max-width:430px;margin-left:auto;margin-right:auto;">
+                <li>Los precios publicados pueden variar según promociones o actualizaciones.</li>
+                <li>La garantía aplicable a los productos se detalla en el proceso de compra o soporte.</li>
+                <li>El uso indebido del sitio o intento de fraude resultará en la suspensión de servicios.</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Fin Términos y Condiciones Modal -->
+        </div>
+        <!-- End Container -->
+      </div>
+      <!-- End Content -->
+    </div>
+  </div>
+  <!-- End Main -->
+
+  <script>
+    // Mostrar modales personalizados para privacidad y términos
+    document.querySelectorAll('a[href="#privacidad"]').forEach(function(el){
+      el.addEventListener('click',function(e){
+        e.preventDefault();
+        document.getElementById('privacidad-modal').style.display='flex';
+      });
+    });
+    document.querySelectorAll('a[href="#terminos"]').forEach(function(el){
+      el.addEventListener('click',function(e){
+        e.preventDefault();
+        document.getElementById('terminos-modal').style.display='flex';
+      });
+    });
+    // Cerrar relación al hacer clic fuera de la caja
+    document.querySelectorAll('.custom-modal').forEach(function(modal){
+      modal.addEventListener('click',function(e){
+        if(e.target===modal){ modal.style.display='none'; }
+      });
+    });
+  </script>
+
+  <!-- Cart Modal -->
+  <div id="cart-modal" class="modal" role="dialog" aria-modal="true" hidden>
+    <div class="modal-dialog">
+      <button type="button" class="modal-close" aria-label="Cerrar">×</button>
+      <div class="modal-body cart-body">
+        <h3 style="margin-bottom:8px; color:#333; text-transform:none;">Tu carrito</h3>
+        <div id="cart-empty" class="cart-empty">Tu carrito está vacío.</div>
+        <table class="cart-table" aria-describedby="cart-summary">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Precio</th>
+              <th>Cant.</th>
+              <th>Subtotal</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="cart-items"></tbody>
+        </table>
+        <div class="cart-summary" id="cart-summary">
+          <div>Total: <strong id="cart-total"></strong></div>
+          <div class="cart-actions">
+            <button type="button" id="cart-clear" class="btn secondary">Vaciar</button>
+            <button type="button" id="cart-checkout-btn" class="btn">Pagar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Modal -->
+  <div id="product-modal" class="modal" role="dialog" aria-modal="true" hidden>
+    <div class="modal-dialog">
+      <button type="button" class="modal-close" aria-label="Cerrar">×</button>
+      <div class="modal-body">
+        <div class="pm-media">
+          <img id="pm-image" alt="" />
+          <div class="pm-thumbs" id="pm-thumbs"></div>
+        </div>
+        <div class="pm-info">
+          <h3 id="pm-name"></h3>
+          <div id="pm-desc" class="pm-desc"></div>
+          <div id="pm-specs"></div>
+          <div class="pm-price">Precio: <strong id="pm-price"></strong></div>
+          <div class="pm-actions">
+            <label for="pm-qty">Cantidad</label>
+            <input type="number" id="pm-qty" min="1" value="1" />
+            <button type="button" id="pm-add" class="btn">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Advanced Search Modal -->
+  <div id="advsearch-modal" class="modal" role="dialog" aria-modal="true" hidden>
+    <div class="modal-dialog">
+      <button type="button" class="modal-close" aria-label="Cerrar">×</button>
+      <div class="modal-body cart-body">
+        <h3 style="margin-bottom:8px; color:#333; text-transform:none;">Búsqueda avanzada</h3>
+        <form id="advsearch-form" action="#" method="get">
+          <div style="display:flex; flex-wrap:wrap; gap:10px;">
+            <label style="flex:1 1 220px;">Texto
+              <input type="text" id="as-text" placeholder="Nombre, especificación..." />
+            </label>
+            <label style="flex:0 0 140px;">Precio mín.
+              <input type="number" id="as-min" min="0" step="1" />
+            </label>
+            <label style="flex:0 0 140px;">Precio máx.
+              <input type="number" id="as-max" min="0" step="1" />
+            </label>
+            <label style="flex:0 0 180px;">Categoría
+              <select id="as-category">
+                <option value="">Todas</option>
+                <option value="Laptops">Laptops</option>
+                <option value="Teclados">Teclados</option>
+                <option value="Accesorios">Accesorios</option>
+              </select>
+            </label>
+            <label style="flex:1 1 220px;">Marca (opcional)
+              <input type="text" id="as-brand" placeholder="HP, Dell, Lenovo..." />
+            </label>
+          </div>
+          <div style="display:flex; gap:10px; justify-content:flex-end; margin-top:10px;">
+            <button type="button" id="as-clear" class="btn secondary">Limpiar</button>
+            <button type="button" id="as-apply" class="btn">Aplicar filtros</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <noscript>
+    <p style="padding: 10px; text-align:center; background:#fff3cd; color:#856404;">Algunas funciones como las pestañas requieren JavaScript para funcionar.</p>
+  </noscript>
+
+  <script src="js/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <script src="js/jquery.slide.js" type="text/javascript"></script>
+  <a id="whatsapp-float" class="whatsapp" href="https://wa.me/18495061763?text=Chatea%20en%20WhatsApp%20con%20FRONTERACOMPUTER" target="_blank" rel="noopener" aria-label="Chatea en WhatsApp con FRONTERACOMPUTER" title="Chatea en WhatsApp con FRONTERACOMPUTER">
+    <span class="icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.5 11.5 0 006.1 18.9L2 22l3.2-4.2A11.5 11.5 0 1020.5 3.5zm-8.7 14.9a9 9 0 01-4.6-1.3l-.3-.2-2.7.7.7-2.6-.2-.3a9 9 0 111-1.2l.3.2a8.6 8.6 0 003.9 1.1h.3c.4 0 .7 0 1-.1.3-.1.6-.1.9-.2.3-.1.6-.2.8-.3l.2-.1c.1-.1.3-.1.4-.2l.1-.1c.2-.1.3-.2.5-.3l.1-.1-.1-.2-.1-.1c-.1-.2-.3-.3-.4-.5l-.1-.1-.2-.3-.2-.3-.2-.4-.1-.2-.2-.4v-.2s0-.1-.1-.1l-.1-.1c-.1-.2-.3-.2-.4-.3h-.1l-.3-.1h-.1c-.1 0-.2 0-.3.1h-.1l-.2.1h-.1c-.2.1-.4.2-.6.4l-.1.1-.1.1-.2.3-.1.1c-.1.2-.1.4-.1.6 0 .3.1.6.2.9.1.3.3.6.4.9.2.3.5.5.8.8.3.2.6.4.9.5.3.1.6.2.9.2a3 3 0 001.4-.2l.1-.1.2-.1.4-.2.1-.1.3-.2.1-.1.3-.2.1-.1c.1-.1.2-.1.3-.2l.1-.1c.1-.1.2-.1.3-.2.1-.1.2-.1.2-.2.1-.1.2-.2.2-.3.1-.1.1-.2.2-.3.1-.2.1-.5.1-.7 0-.3-.1-.6-.2-.9a3 3 0 00-.3-.7l-.1-.1-.1-.2-.1-.1c-.1-.1-.2-.2-.4-.2h-.1c-.2 0-.3.1-.5.2-.2.1-.4.3-.5.4-.2.2-.4.4-.6.6l-.2.2c-.2.2-.3.5-.4.8-.1.3-.2.6-.2.9 0 .3.1.6.2.9.1.3.3.6.5.8.2.3.5.5.8.7.3.2.6.4.9.5.3.1.6.2.9.2.3 0 .6-.1.9-.2.3-.1.6-.2.9-.4.3-.2.6-.4.8-.6.3-.2.5-.4.7-.7.2-.3.3-.6.4-.9.1-.3.1-.6.1-.9 0-.4 0-.7-.1-1-.1-.3-.2-.6-.3-.9a6.7 6.7 0 00-.5-.9 4.9 4.9 0 00-.7-.8 4.8 4.8 0 00-.8-.6 6.3 6.3 0 00-1-.5c-.3-.1-.6-.2-.9-.3-.3-.1-.6-.1-.9-.1z"></path></svg>
+    </span>
+  </a>
+  <script src="js/jquery-func.js" type="text/javascript"></script>
+  <script>
+    // Hacer que el enlace "Inicio" haga scroll suave y cierre el menú
+    document.addEventListener('DOMContentLoaded', function() {
+      var inicioBtn = document.querySelector('a[href="#top"]');
+      if (inicioBtn) {
+        inicioBtn.addEventListener('click', function(e) {
+          var target = document.getElementById('top');
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({behavior: "smooth"});
+            // Cerrar menú móvil
+            var nav = document.getElementById('navigation');
+            var btn = document.getElementById('nav-toggle');
+            if (nav && nav.classList.contains('open')) {
+              nav.classList.remove('open');
+              if (btn) btn.setAttribute('aria-expanded','false');
+            }
+          }
+        });
+      }
+
+      // --- Búsqueda avanzada de productos ---
+      function matchesFilter(text, filter) {
+        if (!filter) return true;
+        return text && text.toLowerCase().indexOf(filter.toLowerCase()) !== -1;
+      }
+
+      var advSearchModal = document.getElementById('advsearch-modal');
+      if (advSearchModal) {
+        // Botón aplicar filtros
+        var applyBtn = document.getElementById('as-apply');
+        var clearBtn = document.getElementById('as-clear');
+        var form = document.getElementById('advsearch-form');
+        var tabsContent = document.querySelectorAll('.tab-content');
+
+        function filterProducts() {
+          // Obtener valores de búsqueda
+          var text = document.getElementById('as-text').value.trim().toLowerCase();
+          var min = parseFloat(document.getElementById('as-min').value) || null;
+          var max = parseFloat(document.getElementById('as-max').value) || null;
+          var category = document.getElementById('as-category').value;
+          var brand = document.getElementById('as-brand').value.trim().toLowerCase();
+
+          tabsContent.forEach(function(tab, idx){
+            var lis = tab.querySelectorAll('ul > li');
+            lis.forEach(function(li){
+              var txt = li.textContent.toLowerCase();
+              var visible = true;
+              // Filtro por texto general
+              if (text && txt.indexOf(text) === -1) visible = false;
+              // Filtro por categoría
+              if (visible && category) {
+                if (idx === 0 && category!=="Laptops") visible = false;
+                if (idx === 1 && category!=="Teclados") visible = false;
+                if (idx === 2 && category!=="Accesorios") visible = false;
+              }
+              // Filtro por marca
+              if (visible && brand) {
+                if (txt.indexOf(brand) === -1) visible = false;
+              }
+              // Filtro por precio
+              if (visible && (min || max)) {
+                var precioElem = li.querySelector('.price strong') || li.querySelector('.price ins strong');
+                if (precioElem) {
+                  var p = precioElem.textContent.replace(/[^0-9.,]/g,"").replace(",","");
+                  var precioUSD = parseFloat(p);
+                  if (min && precioUSD < min) visible = false;
+                  if (max && precioUSD > max) visible = false;
+                }
+              }
+              li.style.display = visible ? '' : 'none';
+            })
+          });
+          // Cerrar modal (opcional)
+          advSearchModal.setAttribute('hidden', '');
+        }
+
+        if (applyBtn) {
+          applyBtn.addEventListener('click', function(e){
+            e.preventDefault();
+            filterProducts();
+          });
+        }
+        // Limpiar filtros
+        if (clearBtn) {
+          clearBtn.addEventListener('click', function(e){
+            e.preventDefault();
+            form.reset();
+            tabsContent.forEach(function(tab){
+              var lis = tab.querySelectorAll('ul > li');
+              lis.forEach(function(li){
+                li.style.display = '';
+              })
+            });
+          });
+        }
+      }
+    });
+  </script>
+  <script>
+    // Scroll suave con offset por barra fija
+    document.addEventListener('DOMContentLoaded', function() {
+      function scrollWithOffset(targetEl){
+        if(!targetEl) return;
+        var header = document.getElementById('top');
+        var offset = header ? header.offsetHeight : 0;
+        var top = targetEl.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop) - offset - 6;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          var targetId = this.getAttribute('href');
+          var el = (targetId && targetId.length > 1) ? document.querySelector(targetId) : null;
+          if (el) {
+            e.preventDefault();
+            scrollWithOffset(el);
+          }
+        });
+      });
+      // Ajustar si se carga con hash en la URL
+      if (location.hash) {
+        var el = document.querySelector(location.hash);
+        if (el) { setTimeout(function(){ scrollWithOffset(el); }, 50); }
+      }
+    });
+    (function(){
+      var topBar = document.getElementById('top');
+      var btn = document.getElementById('nav-toggle');
+      var nav = document.getElementById('navigation');
+      if(!nav) return;
+
+      // Roles ARIA para items
+      try {
+        var topLinks = nav.querySelectorAll('> ul > li > a');
+        for (var i=0;i<topLinks.length;i++){ topLinks[i].setAttribute('role','menuitem'); }
+        var subLinks = nav.querySelectorAll('.submenu a');
+        for (var j=0;j<subLinks.length;j++){ subLinks[j].setAttribute('role','menuitem'); }
+      } catch(e){}
+
+      // Toggle menú principal (móvil)
+      if(btn){
+        btn.addEventListener('click', function(){
+          var isOpen = /(^|\s)open(\s|$)/.test(nav.className);
+          if(isOpen){ closeNav(); } else { openNav(); }
+        }, false);
+      }
+      function openNav(){ nav.className += (nav.className ? ' ' : '') + 'open'; btn && btn.setAttribute('aria-expanded','true'); }
+      function closeNav(){
+        nav.className = nav.className.replace(/(^|\s)open(\s|$)/,' ').trim();
+        if(btn) btn.setAttribute('aria-expanded','false');
+        // Cerrar submenús
+        var openLis = nav.querySelectorAll('.has-submenu.open');
+        for(var i=0;i<openLis.length;i++){ openLis[i].className = openLis[i].className.replace(/(^|\s)open(\s|$)/,' ').trim(); }
+        var toggles = nav.querySelectorAll('.submenu-toggle[aria-expanded="true"]');
+        for(var k=0;k<toggles.length;k++){ toggles[k].setAttribute('aria-expanded','false'); }
+      }
+
+      // Toggle submenús (móvil y accesible)
+      var toggles = nav.querySelectorAll('.submenu-toggle');
+      for(var t=0;t<toggles.length;t++){
+        (function(toggle){
+          toggle.addEventListener('click', function(e){
+            e.preventDefault(); e.stopPropagation();
+            var li = toggle.parentNode;
+            var isOpen = /(^|\s)open(\s|$)/.test(li.className);
+            // Cerrar otros
+            var siblings = nav.querySelectorAll('.has-submenu.open');
+            for(var s=0;s<siblings.length;s++){ if(siblings[s]!==li){ siblings[s].className = siblings[s].className.replace(/(^|\s)open(\s|$)/,' ').trim(); } }
+            if(isOpen){ li.className = li.className.replace(/(^|\s)open(\s|$)/,' ').trim(); toggle.setAttribute('aria-expanded','false'); }
+            else { li.className += ' open'; toggle.setAttribute('aria-expanded','true'); focusFirstSubItem(li); }
+          }, false);
+          // Teclado: Abrir con ArrowDown
+          toggle.addEventListener('keydown', function(e){
+            var key = e.which || e.keyCode;
+            if(key===40){ e.preventDefault(); var li = toggle.parentNode; if(li.className.indexOf('open')===-1){ li.className += ' open'; toggle.setAttribute('aria-expanded','true'); } focusFirstSubItem(li); }
+          }, false);
+        })(toggles[t]);
+      }
+
+      function focusFirstSubItem(li){
+        try { var first = li.querySelector('.submenu a'); if(first){ first.focus(); } } catch(e){}
+      }
+
+      // Cerrar al hacer clic fuera
+      document.addEventListener('click', function(e){
+        if(!nav.contains(e.target)){ closeNav(); }
+      }, false);
+
+      // Teclado en barra de menú (izq/der para items superiores, Esc para cerrar)
+      nav.addEventListener('keydown', function(e){
+        var key = e.which || e.keyCode;
+        var active = document.activeElement;
+        var topItems = nav.querySelectorAll('> ul > li > a, > ul > li > button.submenu-toggle');
+        function moveFocus(delta){
+          var list = Array.prototype.slice.call(topItems);
+          var idx = Math.max(0, list.indexOf(active));
+          var next = list[(idx + delta + list.length) % list.length];
+          if(next){ next.focus(); }
+        }
+        if(key===27){ // ESC
+          var openLi = nav.querySelector('.has-submenu.open');
+          if(openLi){ openLi.className = openLi.className.replace(/(^|\s)open(\s|$)/,' ').trim(); var tgl = openLi.querySelector('.submenu-toggle'); if(tgl){ tgl.setAttribute('aria-expanded','false'); tgl.focus(); } e.preventDefault(); }
+          else if(/(^|\s)open(\s|$)/.test(nav.className)){ closeNav(); btn && btn.focus(); e.preventDefault(); }
+        }
+        if(key===37){ moveFocus(-1); e.preventDefault(); } // Left
+        if(key===39){ moveFocus(1); e.preventDefault(); }  // Right
+      }, false);
+
+      // Sombra al hacer scroll
+      function onScroll(){ if(!topBar) return; var sc = (window.pageYOffset||document.documentElement.scrollTop||0) > 4; var has = /(^|\s)scrolled(\s|$)/.test(topBar.className); if(sc && !has){ topBar.className += ' scrolled'; } if(!sc && has){ topBar.className = topBar.className.replace(/(^|\s)scrolled(\s|$)/,' ').trim(); } }
+      window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+    })();
+  </script>
+</body>
+</html>
